@@ -1,0 +1,4 @@
+node_modules
+.env
+/covarage
+README Ts.Md
