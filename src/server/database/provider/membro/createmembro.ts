@@ -44,8 +44,9 @@ export  const membro_create = async (data:model.membromodel):  Promise< id | Err
                        data_nascimento,
                        active,
                        senha,
-                       rule)
-                       values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16,$17,$18,$19) returning id`, //parametrizaçao
+                       rule,
+                       uf_endereco)
+                       values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16,$17,$18,$19,$20) returning id`, //parametrizaçao
                      [
                         data.nome,
                         data.url_foto,
@@ -65,7 +66,8 @@ export  const membro_create = async (data:model.membromodel):  Promise< id | Err
                         data.data_nascimento,
                         data.active,
                         data.senha,
-                        data.rule
+                        data.rule,
+                        data.uf_endereco
                      ]);
             const id:number = querydata.rows[0].id;
             return{id:id};

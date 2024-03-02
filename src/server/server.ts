@@ -4,6 +4,7 @@ import { router } from './router';
 import 'dotenv/config';
 import cors from 'cors';
 
+
 export const app = express ();
 app.use(cors({
     origin: process.env.CORS_DOMAIN_PERMISSON

@@ -41,7 +41,8 @@ const bodymembroschema:Yup.ObjectSchema<propsbody> = Yup.object().shape({
     data_nascimento: Yup.date().max(new Date()), //fazer uma verificação mais rigorosa, passou mes 16 bixo wtf????
     //
     active: Yup.boolean(),
-    rule: Yup.number().required().oneOf([1, 2, 4, 8])
+    rule: Yup.number().oneOf([1, 2, 4, 6, 8]),
+    uf_endereco:Yup.string(),
 });
 
 

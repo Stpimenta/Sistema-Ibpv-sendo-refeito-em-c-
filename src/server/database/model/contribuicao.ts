@@ -1,6 +1,6 @@
 export interface contribuicao{
 	valor?:number,
-	tipo?:string,
+	descricao?:string,
 	data_contribuicao?:Date,
 	id_membro?:number,
 	id_caixa?:number,
@@ -12,7 +12,7 @@ export interface contribuicao{
 
 export const interface_contribuicao_reference:contribuicao = {
     valor:undefined,
-    tipo:undefined,
+    descricao:undefined,
     data_contribuicao:undefined,
     id_membro:undefined,
     id_caixa:undefined,

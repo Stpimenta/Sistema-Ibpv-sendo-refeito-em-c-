@@ -8,19 +8,11 @@ import * as providers from '../../database/provider';
 
 interface propscontribuicao extends models.contribuicao{}
 
-export interface contribuicao{
-	valor:number,
-	tipo:string,
-	data_contribuicao:Date,
-	id_membro?:number,
-	id_caixa:number,
-    url_envelope?:string
-}
 
 
 const bodycontribuicaochema:Yup.ObjectSchema<propscontribuicao> = Yup.object().shape({
     valor:Yup.number().required(),
-    tipo:Yup.string().required(),
+    descricao:Yup.string().required(),
     data_contribuicao: Yup.date().required(),
     id_membro:Yup.number().moreThan(0),
     id_caixa: Yup.number().required().moreThan(0),

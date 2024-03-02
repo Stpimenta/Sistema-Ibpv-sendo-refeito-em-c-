@@ -33,7 +33,8 @@ const bodymembroschema:Yup.ObjectSchema<propsmembro> = Yup.object().shape({
     //
     active: Yup.boolean().required(),
     senha: Yup.string().required().min(5),
-    rule: Yup.number().required().oneOf([1, 2, 4, 8])
+    rule: Yup.number().required().oneOf([1, 2, 4, 6, 8]),
+    uf_endereco:Yup.string().required(),
 });
 
 

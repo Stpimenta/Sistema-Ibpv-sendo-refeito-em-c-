@@ -36,6 +36,7 @@
         "active": "boolean",  
         "senha": "string",
         "rule": "number"
+        "uf_endereco": "String"
     }
 
 #### Nível de permissão
@@ -282,17 +283,12 @@
     URL: localhost:4000/evento
     Body:
 
-    {
+    {select * from membro
 		"id_ministerio": "number",
         "id_evento": "number"
     }
 
-    Return: ID: compost
-    Status: 201 Created
-
-#
-
-## Caixa (- DELETE - POST - GET by id - PUT - GET all)
+    Return: ID: compostselect * from membroby id - PUT - GET all)
 
 ### Exemplo:
 
@@ -387,7 +383,6 @@
     {
         "valor": "number",
         "descricao": "string",
-        "nome": "string",
         "numero_fiscal": "string",
         "url_comprovante": "string",
         "id_caixa": "number",
@@ -437,7 +432,6 @@
     {
         "valor": "number",
         "descricao": "string",
-        "nome": "string",
         "numero_fiscal": "string",
         "url_comprovante": "string",
         "id_caixa": "number",
@@ -469,11 +463,11 @@
 
 ### Exemplo:
 
-    router.post('contribuicao');  // Permite criar gastos
+    router.post('contribuicao');  // Permite criar contribuicao
 
     router.delete('contribuicao/:id'); // Deleta por id
 
-    router.getpag('contribuicao/'); // Pega por data os gastos
+    router.getpag('contribuicao/'); // Pega por data as contribuicoes
 
     router.put('contribuicao/:id'); // Permite atualizar pelo id, os campos a atualizarem e seus valores devem ser passados no body
 
@@ -481,7 +475,7 @@
 
     {
         "valor": "number",
-        "tipo": "string",
+        "descricao": "string",
         "data_contribuicao": "Date",
         "id_membro": "number",
         "id_caixa": "number",
@@ -678,9 +672,15 @@ Para validação é usado a biblioteca yup em conjunto com métodos internos *(e
 
 # Observações
 
-- Membros put ta aceitando umas datas meio wtf?????????/
+- gasto/contribuicao e caixa a logica nao esta pronta
+- fazer a parte de dowload
+- Membros put ta aceitando umas datas meio wtf, e cpf tambem?????????
 - Estudar o CORS
 - Escrever testes basais de funcionamento
 - Integrar as tabelas associativas e suas edições.
+- Limitação de taxa (Rate Limiting): Isso envolve limitar o número de solicitações que um único cliente pode fazer em um determinado período de tempo.
+- Firewalls de aplicativos web (WAFs): Eles podem ajudar a filtrar o tráfego malicioso e proteger contra ataques DDoS.
+CDNs e serviços de mitigação de DDoS: Redes de distribuição de conteúdo (CDNs) e serviços especializados de mitigação de DDoS podem ajudar a absorver o tráfego de ataque e garantir que seu aplicativo permaneça disponível durante um ataque.
+- Monitoramento e alertas: Ter um sistema de monitoramento e alerta robusto pode ajudar a detectar um aumento anormal no tráfego ou no uso de recursos e alertar você para possíveis ataques.
 
 

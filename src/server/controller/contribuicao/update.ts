@@ -19,7 +19,7 @@ const params_id_schema:Yup.ObjectSchema<propsid> = Yup.object().shape({
 
 const bodycontribuicaochema:Yup.ObjectSchema<propscontribuicao> = Yup.object().shape({
     valor:Yup.number(),
-    tipo:Yup.string(),
+    descricao:Yup.string(),
     data_contribuicao: Yup.date(),
     id_membro:Yup.number().moreThan(0),
     id_caixa: Yup.number().moreThan(0),

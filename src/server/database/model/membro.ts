@@ -18,7 +18,8 @@ export interface membromodel{
     data_nascimento?:Date,
     active?:boolean,
     senha?:string,
-    rule?:number
+    rule?:number,
+    uf_endereco?:string
 }
 
 export const interface_membro_reference:membromodel = {
@@ -40,5 +41,6 @@ export const interface_membro_reference:membromodel = {
     data_nascimento:undefined,
     active:undefined,
     rule:undefined,
+    uf_endereco:undefined
 };
 
