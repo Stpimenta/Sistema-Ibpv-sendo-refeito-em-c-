@@ -3,7 +3,6 @@ import { Response,Request } from 'express';
 import * as Yup from 'yup';
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
-import  * as models from '../../database/model';
 import * as providers from '../../database/provider';
 
 interface singIn_ministerio{

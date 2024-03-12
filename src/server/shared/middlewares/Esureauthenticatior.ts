@@ -6,6 +6,8 @@ export const ensure_authenticatior:RequestHandler = (req,res,next)=>{
     //solicito a propriedade authirization do cabeçalho
     const {authorization} = req.headers; // pego uma propriedade direto
 
+
+
     //caso n exista ja retorno erro
     if(!authorization){
         return res.status(StatusCodes.UNAUTHORIZED).json({error:'não autorizado'});

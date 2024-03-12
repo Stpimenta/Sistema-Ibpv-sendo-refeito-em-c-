@@ -672,6 +672,7 @@ Para validação é usado a biblioteca yup em conjunto com métodos internos *(e
 
 # Observações
 
+- autenticacao/validade
 - gasto/contribuicao e caixa a logica nao esta pronta
 - fazer a parte de dowload
 - Membros put ta aceitando umas datas meio wtf, e cpf tambem?????????

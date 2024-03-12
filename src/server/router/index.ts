@@ -58,3 +58,7 @@ router.post('/evento_ministerio',ensure_authenticatior,ValidationRule,controller
 
 //router singin
 router.post('/ibpv/singin',controller.singin_validation,controller.singin);
+
+//router repositorie
+router.get('/ibpv/uploadfinanceiro/:filetype',ensure_authenticatior, ValidationRule,controller.getrepositorieToken);
+router.get('/ibpv/getimgfinanceiro',ensure_authenticatior, ValidationRule, controller.getsignedurl_validation, controller.getsignedrepositorieurl);

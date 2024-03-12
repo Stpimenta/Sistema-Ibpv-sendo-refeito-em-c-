@@ -7,3 +7,5 @@ export * from './evento';
 export * from './membro_ministerio';
 export * from './evento_ministerio';
 export * from './signin/signin';
+export * from './repositorie/getgenerated_repositoryfinanceiro_url';
+export * from './repositorie/getsignedupload_repositoryfinanceiro';

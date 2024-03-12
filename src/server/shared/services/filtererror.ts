@@ -66,6 +66,10 @@ export const errorfill = (error:Error): {erro:string,status?:number} =>{
         if(error.message.includes('informe algo:')){
             return {erro:error.message};
         }
+
+        if(error.message.includes('extensão não permitida')){
+            return {erro:error.message};
+        }
             
     }
     

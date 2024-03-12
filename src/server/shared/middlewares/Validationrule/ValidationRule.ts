@@ -21,7 +21,7 @@ const definePermissions = {
     [Rules.Treasury]:[{route:'^/caixa/\\d+$', metod:['GET','POST','DELETE','PUT']},{route:'^/caixa', metod:['GET','POST','DELETE','PUT']},
         {route:'^/gasto$', metod:['GET','POST','DELETE','PUT']}, {route:'^/gasto/\\d+$', metod:['GET','POST','DELETE','PUT']},
         {route:'^/contribuicao$', metod:['GET','POST','DELETE','PUT']}, {route:'^/contribuicao/\\d+$', metod:['GET','POST','DELETE','PUT']},
-        {route:'^/evento$', metod:['GET']},],
+        {route:'^/evento$', metod:['GET']},{route:'^/ibpv/uploadfinanceiro$', metod:['GET']},{route:'^/ibpv/getimgfinanceiro$', metod:['GET']},],
 
     [Rules.User]:[{route:'^/evento$', metod:['GET']},]
 
